@@ -1,0 +1,15 @@
+name = "tech-crusader"
+compatibility_date = "2026-11-26"
+workers_dev = true
+
+[assets]
+directory = "."
+not_found_handling = "404"
+
+[[routes]]
+pattern = "derricksmith.dev"
+custom_domain = true
+
+[[routes]]
+pattern = "www.derricksmith.dev"
+custom_domain = true
