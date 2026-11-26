@@ -795,8 +795,8 @@ textarea:focus-visible {
 
 
 /* ==========================
-   TRAVELING LIGHTNING BOLT
-   The bolt itself moves around the card perimeter.
+   ELECTRIC BLUE CARD LIGHTNING
+   Canvas crackle and traveling charge based on electric.js.
 ========================== */
 
 .card.lightning-border {
@@ -813,33 +813,16 @@ textarea:focus-visible {
   z-index: -1;
 }
 
-.lightning-orbit {
+.lightning-canvas {
   position: absolute;
-  inset: -6px;
-  z-index: 3;
-  width: calc(100% + 12px);
-  height: calc(100% + 12px);
+  z-index: 2;
+  display: block;
   overflow: visible;
   pointer-events: none;
 }
 
-.lightning-bolt-glow {
-  fill: #168cff;
-  opacity: 0.96;
-  filter: url(#lightning-blur);
-}
-
-.lightning-bolt-core {
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 2.1;
-  stroke-linecap: round;
-  stroke-linejoin: bevel;
-  filter: url(#lightning-core-glow);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .lightning-orbit {
+  .lightning-canvas {
     display: none;
   }
 }
