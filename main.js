@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const glowShape = document.createElementNS(svgNS, "path");
     glowShape.setAttribute("class", "lightning-bolt-glow");
+    glowShape.style.filter = `url(#lightning-blur-${lightningCards.length})`;
     glowShape.setAttribute(
       "d",
       "M-34 0 L-18 -6 L-9 5 L2 -8 L13 5 L24 -4 L34 0 L23 1 L13 9 L2 0 L-9 9 L-18 0 Z"
@@ -63,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const coreShape = document.createElementNS(svgNS, "path");
     coreShape.setAttribute("class", "lightning-bolt-core");
+    coreShape.style.filter = `url(#lightning-core-glow-${lightningCards.length})`;
     coreShape.setAttribute(
       "d",
       "M-30 0 L-18 -4 L-9 4 L2 -6 L13 4 L24 -3 L30 0"
@@ -142,7 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
       lightningCards.forEach(state => visibilityObserver.observe(state.card));
     }
 
-    let animationFrame = 0;
     const travelSpeed = 0.18; // SVG units per millisecond (about 180 px/sec).
 
     function animateLightning(timestamp) {
@@ -167,16 +168,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
-      animationFrame = window.requestAnimationFrame(animateLightning);
+      window.requestAnimationFrame(animateLightning);
     }
 
-    animationFrame = window.requestAnimationFrame(animateLightning);
-
-    document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "visible" && !animationFrame) {
-        animationFrame = window.requestAnimationFrame(animateLightning);
-      }
-    });
+    window.requestAnimationFrame(animateLightning);
   }
 
 
