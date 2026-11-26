@@ -4,7 +4,7 @@ workers_dev = true
 
 [assets]
 directory = "."
-not_found_handling = "404"
+not_found_handling = "none"
 
 [[routes]]
 pattern = "derricksmith.dev"
