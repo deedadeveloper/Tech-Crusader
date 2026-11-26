@@ -1,5 +1,5 @@
 # Logo and brand artwork
 
-Place the compact Tech Crusader logo in this directory. The existing `hero-mascot.png` is the large homepage illustration; it is not a substitute for a compact logo.
+`hero-mascot.png` is currently used as the brand mark in the site header and as the homepage illustration.
 
-Current homepage reference: `assets/logo/hero-mascot.png`.
+Current references: `assets/logo/hero-mascot.png` is used in each page header and as the homepage illustration and favicon.
