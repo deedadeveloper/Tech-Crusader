@@ -521,29 +521,29 @@ footer {
       inset 0 0 14px rgba(15, 61, 255, 0.12);
   }
 
-  @keyframes lightningPulse {
-    0%, 88%, 100% {
-      opacity: 0.78;
-      filter: drop-shadow(0 0 5px rgba(61, 136, 255, 0.45));
-    }
-
-    90%, 94% {
-      opacity: 1;
-      filter:
-        drop-shadow(0 0 10px rgba(61, 136, 255, 0.85))
-        drop-shadow(0 0 22px rgba(61, 136, 255, 0.4));
-    }
-
-    92% {
-      opacity: 0.55;
-      filter: drop-shadow(0 0 3px rgba(61, 136, 255, 0.3));
-    }
-  }
-
   50% {
     box-shadow:
       0 0 26px rgba(61, 136, 255, 0.48),
       inset 0 0 18px rgba(61, 136, 255, 0.16);
+  }
+}
+
+@keyframes lightningPulse {
+  0%, 88%, 100% {
+    opacity: 0.78;
+    filter: drop-shadow(0 0 5px rgba(61, 136, 255, 0.45));
+  }
+
+  90%, 94% {
+    opacity: 1;
+    filter:
+      drop-shadow(0 0 10px rgba(61, 136, 255, 0.85))
+      drop-shadow(0 0 22px rgba(61, 136, 255, 0.4));
+  }
+
+  92% {
+    opacity: 0.55;
+    filter: drop-shadow(0 0 3px rgba(61, 136, 255, 0.3));
   }
 }
 
@@ -791,4 +791,55 @@ textarea:focus-visible {
 #menu-toggle:focus-visible + .hamburger-btn {
   outline: 2px solid var(--ice);
   outline-offset: 4px;
+}
+
+
+/* ==========================
+   TRAVELING LIGHTNING BOLT
+   The bolt itself moves around the card perimeter.
+========================== */
+
+.card.lightning-border {
+  overflow: visible;
+  border: 1px solid rgba(61, 136, 255, 0.28);
+}
+
+.card.lightning-border::before {
+  content: none;
+  animation: none;
+}
+
+.card.lightning-border::after {
+  z-index: -1;
+}
+
+.lightning-orbit {
+  position: absolute;
+  inset: -6px;
+  z-index: 3;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.lightning-bolt-glow {
+  fill: #168cff;
+  opacity: 0.96;
+  filter: url(#lightning-blur);
+}
+
+.lightning-bolt-core {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2.1;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  filter: url(#lightning-core-glow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightning-orbit {
+    display: none;
+  }
 }
