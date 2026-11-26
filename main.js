@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const project = String(formData.get("project") || "").trim();
       const subject = encodeURIComponent("Tech Crusader project inquiry");
       const body = encodeURIComponent(
-        `Name: ${name}\\nReply email: ${email}\\n\\nProject details:\\n${project}`
+        `Name: ${name}\nReply email: ${email}\n\nProject details:\n${project}`
       );
 
       window.location.href =
