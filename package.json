@@ -1,0 +1,8 @@
+{
+  "name": "tech-crusader",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": {
+    "wrangler": "4.168.0"
+  }
+}
