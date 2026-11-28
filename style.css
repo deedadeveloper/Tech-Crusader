@@ -116,6 +116,13 @@ body::before {
   font-size: 0.68rem;
   letter-spacing: 0.12em;
 }
+.hero-tagline { display:flex; flex-wrap:wrap; gap:.34em; margin:0 0 18px; font-size:clamp(1.05rem,2vw,1.45rem); font-weight:900; letter-spacing:.12em; text-transform:uppercase; }
+.hero-tagline span:nth-child(1) { color:#ffffff; }
+.hero-tagline span:nth-child(2) { color:#49a7ff; }
+.hero-tagline span:nth-child(3) { color:#b5d9ff; }
+.hero-tagline span:nth-child(4) { color:#35d6ff; }
+.hero-tagline span:nth-child(5) { color:#8d7bff; }
+
 
 .nav-desktop {
   display: flex;
