@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
 
+      el.classList.add("custom-border");
       el.appendChild(canvas);
 
       const card = {
