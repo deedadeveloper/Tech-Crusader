@@ -13,3 +13,17 @@ footer{min-height:90px;padding:24px max(24px,calc((100% - 1160px)/2));display:fl
 @media(max-width:900px){.nav-desktop{display:none}.menu-wrapper{display:block}.hero{grid-template-columns:1fr;padding-top:65px;min-height:auto}.hero-art{min-height:350px}.manifesto{grid-template-columns:1fr 1fr}.section-kicker{grid-column:1/-1}.feature-grid{grid-template-columns:repeat(2,1fr)}.build-row{grid-template-columns:42px 1fr 110px}.service-block{grid-template-columns:42px 1fr 150px}.contact-grid{gap:30px}.pricing-principles{gap:30px}}
 @media(max-width:620px){.topbar{height:72px;padding:0 16px}.brand-logo{width:40px;height:40px}.brand strong{font-size:.78rem}.brand small{font-size:.5rem}.hero,.section,.manifesto,.process,.page-shell,.contact-band{width:calc(100% - 36px)}.hero{padding:55px 0 65px;gap:20px}.hero h1,.page-intro h1{font-size:clamp(2.8rem,13vw,4.4rem)}.hero-art{min-height:260px}.hero-frame{width:88%;padding:10px}.note-one{left:0}.note-two{right:0}.hero-meta{gap:12px;margin-top:35px;font-size:.49rem}.manifesto{grid-template-columns:1fr;gap:18px;padding:70px 0}.section,.process{padding:70px 0}.section-top{align-items:start;flex-direction:column}.feature-grid,.steps,.price-layout{grid-template-columns:1fr}.feature-card{min-height:220px}.statement{padding:65px 22px}.contact-band{margin:55px auto 70px;padding:28px 22px;align-items:flex-start;flex-direction:column}.page-shell{padding-top:50px}.page-intro{padding:15px 0 45px}.build-row,.service-block{grid-template-columns:34px 1fr;gap:14px;padding:32px 0}.build-aside,.service-label{grid-column:2;text-align:left;padding-top:0}.build-row ul{display:block}.callout{padding:30px 22px;margin:60px 0}.pricing-principles,.contact-grid{grid-template-columns:1fr;gap:26px}.pricing-principles{padding:60px 0;margin-top:50px}.contact-grid{padding-bottom:60px}.contact-form{padding:24px 18px}.price-stamp{position:static;display:inline-block;margin-bottom:15px}.price-card{padding:25px 22px}footer{padding:25px 18px;align-items:flex-start;flex-direction:column;gap:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+
+/* Brand identity + original electric card treatment restored */
+.brand-logo{width:64px;height:64px;flex:0 0 64px;object-fit:contain}
+.brand strong{font-size:1rem;letter-spacing:.17em}
+.brand small{font-size:.7rem;letter-spacing:.13em;color:var(--ice);white-space:nowrap}
+.hero-tagline{margin:0 0 18px;color:var(--ice);font:500 .76rem var(--mono);letter-spacing:.2em;text-shadow:0 0 14px rgba(85,184,255,.55)}
+.card.lightning-border{position:relative;isolation:isolate;overflow:visible;border:1px solid rgba(61,136,255,.28)}
+.card.lightning-border:before{content:none;animation:none}
+.card.lightning-border:after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:linear-gradient(145deg,rgba(7,18,32,.97),rgba(3,8,15,.98));pointer-events:none}
+.card.lightning-border .lightning-canvas{z-index:3}
+.price-card.card.lightning-border:after{background:linear-gradient(145deg,rgba(14,32,52,.98),rgba(7,16,27,.99))}
+.featured-price.card.lightning-border:after{background:linear-gradient(145deg,rgba(15,54,87,.98),rgba(7,19,32,.99))}
+@media(max-width:620px){.brand-logo{width:52px;height:52px;flex-basis:52px}.brand strong{font-size:.82rem}.brand small{font-size:.55rem;letter-spacing:.09em}}
