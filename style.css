@@ -206,7 +206,7 @@ body::before {
 ========================== */
 
 .hero {
-  min-height: calc(100vh - 85px);
+  min-height: calc(100vh + 120px - 85px);
   width: 100%;
   max-width: 1500px;
   margin: auto;
