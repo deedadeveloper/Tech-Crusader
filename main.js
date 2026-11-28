@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Electric border effect adapted directly from Derricks-Custom-Tech-Solutions.
   // The motion and crackle stay the same; only the reference green is blue.
   (() => {
-    const TARGETS = ".card.lightning-border";
+    const TARGETS = ".card, .definition-card, .hero-frame, .build-cta, .contact-form";
     const COLOR = "61,136,255"; // Tech Crusader cyan-blue (#3d88ff)
     const PAD = 12;
     const AMP = 5;
